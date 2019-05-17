@@ -471,7 +471,7 @@ impl IssueOptions {
     }
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Issue {
     pub id: u64,
     pub url: String,
@@ -496,7 +496,7 @@ pub struct Issue {
 }
 
 /// A reference to a pull request.
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct PullRef {
     pub url: String,
     pub html_url: String,

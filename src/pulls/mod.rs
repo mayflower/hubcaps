@@ -229,7 +229,7 @@ impl<C: Clone + Connect + 'static> PullRequests<C> {
 // representations (todo: replace with derive_builder)
 
 /// representation of a github pull request
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Pull {
     pub id: u64,
     pub url: String,
@@ -267,7 +267,7 @@ pub struct Pull {
     pub labels: Vec<Label>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Commit {
     pub label: String,
     #[serde(rename = "ref")]

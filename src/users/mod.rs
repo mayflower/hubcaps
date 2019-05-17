@@ -5,7 +5,7 @@ use {unfold, Future, Github, Stream};
 use hyper::client::connect::Connect;
 
 /// User information
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct User {
     pub login: String,
     pub id: u64,
